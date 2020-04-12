@@ -11,5 +11,12 @@
                 Language Validation
             </a>
         </li>
+        <li>
+            <a href="{{ route('simple-form') }}"
+               class="text-gray-900 underline hover:text-gray-700"
+            >
+                A Form Without Specifying Every Form Element
+            </a>
+        </li>
     </ul>
 </x-layout>
