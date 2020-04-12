@@ -1,5 +1,5 @@
 <div>
-    <label class="block text-gray-900" for="name">Name</label>
+    <label class="block text-gray-700" for="name">Name</label>
     <input wire:model="name"
            id="name"
            placeholder="Name please..."
@@ -11,4 +11,36 @@
     @error('name')
     <p class="mt-1 text-red-500">{{ $message }}</p>
     @enderror
+    <hr class="my-4">
+    <p class="text-gray-700">Switch the language</p>
+    <ul class="mt-2 flex justify-between">
+        <li>
+            <a class="px-2 py-1 border rounded {{ session()->get('locale') === 'en' ? 'bg-gray-200' : '' }}"
+               href="{{ route('language-validation', ['locale' => 'en']) }}"
+            >
+                English
+            </a>
+        </li>
+        <li>
+            <a class="px-2 py-1 border rounded {{ session()->get('locale') === 'ar' ? 'bg-gray-200' : '' }}"
+               href="{{ route('language-validation', ['locale' => 'ar']) }}"
+            >
+                Arabic
+            </a>
+        </li>
+        <li>
+            <a class="px-2 py-1 border rounded {{ session()->get('locale') === 'es' ? 'bg-gray-200' : '' }}"
+               href="{{ route('language-validation', ['locale' => 'es']) }}"
+            >
+                Spanish
+            </a>
+        </li>
+        <li>
+            <a class="px-2 py-1 border rounded {{ session()->get('locale') === 'nl' ? 'bg-gray-200' : '' }}"
+               href="{{ route('language-validation', ['locale' => 'nl']) }}"
+            >
+                Dutch
+            </a>
+        </li>
+    </ul>
 </div>

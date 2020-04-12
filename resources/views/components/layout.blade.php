@@ -13,6 +13,11 @@
     <div class="px-4 py-4 bg-white rounded-lg shadow-lg">
         {{ $slot }}
     </div>
+    @if(\Route::currentRouteName() !== 'welcome')
+        <div class="mt-2 text-center">
+            <a class="text-gray-500 transition duration-75 ease-in hover:text-gray-700" href="/">Back to home</a>
+        </div>
+    @endif
 </div>
 <livewire:scripts/>
 </body>
