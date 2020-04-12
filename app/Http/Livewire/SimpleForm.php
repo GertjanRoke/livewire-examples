@@ -8,7 +8,7 @@ class SimpleForm extends Component
 {
     /**
      * With creating a single $form property we can easily add new data inside from the frontend like this:
-     * @example <input wire:model="form.name">
+     * @example <input wire:model="form.name"> or <input wire:model.lazy="form.name"> to reduce the request calls
      *
      * @var array
      */
