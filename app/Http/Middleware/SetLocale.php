@@ -20,7 +20,16 @@ class SetLocale
     {
         if ($locale = $request->route('locale')) {
             App::setLocale($locale);
+
+            /**
+             * We need to store the locale in the session because we don't want to pass it to each component we create.
+             * Also because we fetch the locale from the route but the url for the Livewire API endpoint only
+             * contains the component name.
+             */
             Session::put('locale', $locale);
+        } else {
+            // Forget the locale so other examples will not be conflicted by it.
+            Session::forget('locale');
         }
 
         return $next($request);
