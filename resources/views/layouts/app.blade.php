@@ -7,6 +7,7 @@
     <title>{{ config('app.name') }}</title>
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <livewire:styles/>
+    @stack('pre-scripts')
 </head>
 <body class="bg-gray-100 antialiased">
 <div class="container mx-auto max-w-lg py-16">

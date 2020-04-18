@@ -19,3 +19,5 @@ Route::view('/', 'welcome')->name('welcome');
 Route::livewire('{locale}/validation', 'language-validation')->name('language-validation');
 
 Route::livewire('simple-form', 'simple-form')->name('simple-form');
+
+Route::livewire('alpine-js-event-listener', 'alpine-js-event-listener')->name('alpine-js-event-listener');

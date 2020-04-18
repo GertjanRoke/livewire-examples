@@ -20,5 +20,12 @@
                 A Form Without Specifying Every Form Element
             </a>
         </li>
+        <li>
+            <a href="{{ route('alpine-js-event-listener') }}"
+               class="text-gray-900 underline hover:text-gray-700"
+            >
+                Example where Livewire fires an event and Alpine.js acts on that event.
+            </a>
+        </li>
     </ul>
 @endsection
