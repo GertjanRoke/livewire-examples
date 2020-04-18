@@ -16,6 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::view('/', 'welcome')->name('welcome');
 
 // The setting of the locale is handled in a the middleware: \App\Http\Middleware\SetLocale.php:20:9
-Route::view('{locale}/validation', 'language-validation')->name('language-validation');
+Route::livewire('{locale}/validation', 'language-validation')->name('language-validation');
 
-Route::view('simple-form', 'simple-form')->name('simple-form');
+Route::livewire('simple-form', 'simple-form')->name('simple-form');

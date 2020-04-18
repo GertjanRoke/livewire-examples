@@ -1,4 +1,6 @@
-<x-layout>
+@extends('layouts.app')
+
+@section('content')
     <h1 class="text-gray-700 text-2xl">Welcome To {{ config('app.name') }}</h1>
     <p class="mt-2 text-gray-600 tracking-wider italic">Click on one of the links to see how I build that
         use-case.</p>
@@ -19,4 +21,4 @@
             </a>
         </li>
     </ul>
-</x-layout>
+@endsection

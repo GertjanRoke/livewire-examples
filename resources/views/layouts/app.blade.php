@@ -11,7 +11,7 @@
 <body class="bg-gray-100 antialiased">
 <div class="container mx-auto max-w-lg py-16">
     <div class="px-4 py-4 bg-white rounded-lg shadow-lg">
-        {{ $slot }}
+        @yield('content')
     </div>
     @if(\Route::currentRouteName() !== 'welcome')
         <div class="mt-2 text-center">
