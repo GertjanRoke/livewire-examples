@@ -6,13 +6,13 @@ use Livewire\Component;
 
 class AlpineJsEventListener extends Component
 {
+    public function emitEvent()
+    {
+        $this->emit('somethingUpdated');
+    }
+
     public function render()
     {
         return view('livewire.alpine-js-event-listener');
-    }
-
-    public function updatingSomething()
-    {
-        $this->emit('somethingUpdated');
     }
 }

@@ -11,7 +11,7 @@
            type="text"
            class="py-2 px-4 w-full bg-white appearance-none border rounded-sm text-gray-700 leading-tight rounded focus:outline-none focus:bg-white">
     <div class="mt-4 text-center">
-        <button wire:click="updatingSomething" type="button" class="px-3 py-1 bg-gray-700 text-white font-semibold
+        <button wire:click="emitEvent" type="button" class="px-3 py-1 bg-gray-700 text-white font-semibold
     rounded">
             Fire the event!
         </button>

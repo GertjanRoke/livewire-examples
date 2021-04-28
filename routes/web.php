@@ -1,6 +1,9 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+    use App\Http\Livewire\AlpineJsEventListener;
+    use App\Http\Livewire\LanguageValidation;
+    use App\Http\Livewire\SimpleForm;
+    use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,8 +19,8 @@ use Illuminate\Support\Facades\Route;
 Route::view('/', 'welcome')->name('welcome');
 
 // The setting of the locale is handled in a the middleware: \App\Http\Middleware\SetLocale.php:20:9
-Route::livewire('{locale}/validation', 'language-validation')->name('language-validation');
+Route::get('{locale}/validation', LanguageValidation::class)->name('language-validation');
 
-Route::livewire('simple-form', 'simple-form')->name('simple-form');
+Route::get('simple-form', SimpleForm::class)->name('simple-form');
 
-Route::livewire('alpine-js-event-listener', 'alpine-js-event-listener')->name('alpine-js-event-listener');
+Route::get('alpine-js-event-listener', AlpineJsEventListener::class)->name('alpine-js-event-listener');

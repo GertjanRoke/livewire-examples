@@ -8,9 +8,11 @@
            focus:outline-none focus:bg-white
            {{ $errors->has('name') ? 'border-red-500 focus:border-red-600' : 'border-gray-400 focus:border-blue-500' }}"
            \>
-    @error('name')
-    <p class="mt-1 text-red-500">{{ $message }}</p>
-    @enderror
+    <div>
+        @error('name')
+        <p class="mt-1 text-red-500">{{ $message }}</p>
+        @enderror
+    </div>
     <hr class="my-4">
     <p class="text-gray-700">Switch the language</p>
     <ul class="mt-2 flex justify-between">
