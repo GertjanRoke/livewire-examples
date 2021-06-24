@@ -1,9 +1,10 @@
 <?php
 
-    use App\Http\Livewire\AlpineJsEventListener;
-    use App\Http\Livewire\LanguageValidation;
-    use App\Http\Livewire\SimpleForm;
-    use Illuminate\Support\Facades\Route;
+use App\Http\Livewire\AlpineJsEventListener;
+use App\Http\Livewire\AutocompleteForm;
+use App\Http\Livewire\LanguageValidation;
+use App\Http\Livewire\SimpleForm;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,5 @@ Route::get('{locale}/validation', LanguageValidation::class)->name('language-val
 Route::get('simple-form', SimpleForm::class)->name('simple-form');
 
 Route::get('alpine-js-event-listener', AlpineJsEventListener::class)->name('alpine-js-event-listener');
+
+Route::get('autocomplete', AutocompleteForm::class)->name('autocomplete');

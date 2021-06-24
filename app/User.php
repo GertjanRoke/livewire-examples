@@ -2,38 +2,33 @@
 
 namespace App;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Model;
+use Sushi\Sushi;
 
-class User extends Authenticatable
+class User extends Model
 {
-    use Notifiable;
+    use Sushi;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'name', 'email', 'password',
-    ];
-
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
-
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
+    protected $rows = [
+        [
+            'name' => 'John Doe',
+            'email' => 'johndoe@example.com',
+        ],
+        [
+            'name' => 'Jane Doe',
+            'email' => 'janedoe@example.com',
+        ],
+        [
+            'name' => 'Foo',
+            'email' => 'foo@example.com',
+        ],
+        [
+            'name' => 'Bar',
+            'email' => 'bar@example.com',
+        ],
+        [
+            'name' => 'Baz',
+            'email' => 'baz@example.com',
+        ],
     ];
 }

@@ -32,7 +32,7 @@
             <button class="px-3 py-1 bg-gray-700 text-white font-semibold rounded" type="submit">
                 Submit
             </button>
-            <p class="ml-2 text-sm text-gray-500 italic">- this will then be session flashed to the html below.</p>
+            <p class="ml-2 text-sm text-gray-500 italic">- this will then be flashed to the session and shown below.</p>
         </div>
     </form>
     @if(session()->has('form-input'))

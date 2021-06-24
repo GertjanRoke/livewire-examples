@@ -11,3 +11,9 @@ composer install
 cp .env.example .env
 php artisan key:generate
 ```
+
+### Current examples
+- Language Validation
+- A Form Without Specifying Every Form Element
+- Example where Livewire fires an event and Alpine acts on that event.
+- Autocomplete with Alpine v3
